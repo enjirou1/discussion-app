@@ -1,0 +1,12 @@
+=====Buat Project
+npm create vite@latest
+
+=====Buat standar penulisan dengan ESLINT
+npm i eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin --save-dev
+npx eslint --init
+npm i eslint-config-dicodingacademy --save-dev
+npx eslint ./src
+
+npm i @reduxjs/toolkit
+npm i react-redux
+npm i primereact
