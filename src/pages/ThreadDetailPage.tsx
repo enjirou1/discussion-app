@@ -9,6 +9,7 @@ import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { asyncReceiveUsers } from '@/states/users/action';
 import type { Comment } from '@/utils/type';
+import AfterLoginContainer from '@/components/styled/AfterLoginContainer';
 
 function ThreadDetailPage() {
   const { threadId } = useParams();
@@ -68,7 +69,8 @@ function ThreadDetailPage() {
   };
 
   return (
-    <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    // <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    <AfterLoginContainer>
       <div className='flex flex-col gap-4 px-4 py-10 min-h-screen bg-white overflow-y-auto' style={{ width: '600px', height: '80vh' }}>
         <div className='flex items-center'>
           <img src={threadDetail?.owner?.avatar} alt="" className='w-10 h-10 rounded-full mr-2' />
@@ -107,7 +109,8 @@ function ThreadDetailPage() {
           })
         }
       </div>
-    </div>
+    </AfterLoginContainer>
+    // </div>
   );
 }
 

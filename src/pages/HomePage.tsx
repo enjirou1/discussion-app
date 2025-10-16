@@ -13,6 +13,7 @@ import { Button } from 'primereact/button';
 import useInput from '@/hooks/useInput';
 import ListContent from '@/components/ListContent';
 import { Chip } from 'primereact/chip';
+import AfterLoginContainer from '@/components/styled/AfterLoginContainer';
 
 function HomePage() {
   const navigate = useNavigate();
@@ -61,7 +62,8 @@ function HomePage() {
   };
 
   return (
-    <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    // <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    <AfterLoginContainer>
       <div className='flex flex-col gap-4 px-4 py-10 min-h-screen bg-white overflow-y-auto' style={{ width: '600px', height: '80vh' }}>
         <form onSubmit={onSubmitThread} className='flex flex-col gap-2 mb-4' noValidate>
           <InputText
@@ -133,7 +135,8 @@ function HomePage() {
           }
         </ListContent>
       </div>
-    </div>
+    </AfterLoginContainer>
+    // </div>
   );
 }
 

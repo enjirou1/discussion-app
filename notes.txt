@@ -10,3 +10,17 @@ npx eslint ./src
 npm i @reduxjs/toolkit
 npm i react-redux
 npm i primereact
+
+=====Testing
+npm install vitest --save-dev
+npm install jsdom --save-dev
+npm install @testing-library/react @testing-library/user-event @testing-library/jest-dom@5 --save-dev
+npm install vite@latest @vitejs/plugin-react@latest
+npm install cypress --save-dev
+npm install eslint-plugin-cypress --save-dev
+npx cypress open
+Atau menjalankan di terminal npx cypress run
+
+=====CI/CD
+npm install start-server-and-test --save-dev
+npm run ci:test

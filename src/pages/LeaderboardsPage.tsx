@@ -5,6 +5,7 @@ import { Card } from 'primereact/card';
 import type { Leaderboard } from '@/utils/type';
 import { asyncReceiveLeaderboards } from '@/states/leaderboards/action';
 import ListContent from '@/components/ListContent';
+import AfterLoginContainer from '@/components/styled/AfterLoginContainer';
 
 function LeaderboardsPage() {
   const {
@@ -17,7 +18,8 @@ function LeaderboardsPage() {
   }, [dispatch]);
 
   return (
-    <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    // <div className='flex justify-center pt-18' style={{ height: '100%' }}>
+    <AfterLoginContainer>
       <div className='flex flex-col gap-4 px-4 py-10 min-h-screen bg-white overflow-y-auto' style={{ width: '600px', height: '80vh' }}>
         <h2 className='text-3xl text-center mb-5'>Leaderboards</h2>
         <ListContent
@@ -41,7 +43,8 @@ function LeaderboardsPage() {
           }
         </ListContent>
       </div>
-    </div>
+    </AfterLoginContainer>
+    // </div>
   );
 }
 

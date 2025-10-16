@@ -5,6 +5,7 @@ import { asyncSetAuthUser } from '@/states/authUser/action';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { Card } from 'primereact/card';
+import BeforeLoginContainer from '@/components/styled/BeforeLoginContainer';
 
 function LoginPage() {
   const dispatch: AppDispatch = useDispatch();
@@ -14,7 +15,8 @@ function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-50">
+    // <div className="min-h-screen flex justify-center items-center bg-gray-50">
+    <BeforeLoginContainer>
       <Card className="w-full max-w-md rounded-lg shadow-lg border-none p-8" style={{ borderRadius: '10px' }}>
         <LoginInput login={onLogin} />
         <p className="mt-4 text-center">
@@ -24,7 +26,8 @@ function LoginPage() {
           </Link>
         </p>
       </Card>
-    </div>
+    </BeforeLoginContainer>
+    // </div>
   );
 }
 

@@ -5,6 +5,7 @@ import RegisterInput from '../components/RegisterInput';
 import { asyncRegisterUser, receiveUsersActionCreator } from '../states/users/action';
 import type { AppDispatch, RootState } from '@/states';
 import { Card } from 'primereact/card';
+import BeforeLoginContainer from '@/components/styled/BeforeLoginContainer';
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -26,7 +27,8 @@ function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center bg-gray-50">
+    // <div className="min-h-screen flex justify-center items-center bg-gray-50">
+    <BeforeLoginContainer>
       <Card className="w-full max-w-md rounded-lg shadow-lg border-none p-8" style={{ borderRadius: '10px' }}>
         <RegisterInput register={onRegister} />
         <p className="mt-4 text-center">
@@ -35,7 +37,8 @@ function RegisterPage() {
           <Link to="/">Login</Link>
         </p>
       </Card>
-    </div>
+    </BeforeLoginContainer>
+    // </div>
   );
 }
 
