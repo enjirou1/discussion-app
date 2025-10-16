@@ -99,7 +99,7 @@ function asyncReceiveThreads() {
 
     try {
       const threads = await api.getAllThreads();
-      dispatch(receiveThreadsActionCreator(threads, false, null));
+      dispatch(receiveThreadsActionCreator([], false, null));
     } catch (error) {
       dispatch(receiveThreadsActionCreator([], false, (error as Error).message));
     }
